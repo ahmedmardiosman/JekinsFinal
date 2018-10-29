@@ -38,6 +38,14 @@ public class MovieEndpoint {
 	public String deleteMovie(@PathParam("id") Long id) {
 		return service.deleteMovie(id);
 	}
+	
+	@Path("/getMovie/{id}")
+	@GET
+	@Produces({ "application/json" })
+	public String getMovie(@PathParam("id") Long id) {
+		return service.getMovie(id);
+	}
+	
 
 	public void setService(MovieService service) {
 		this.service = service;
